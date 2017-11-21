@@ -3,8 +3,7 @@ package com.bjsxt.base.conn009;
 import java.util.LinkedList;
 import java.util.concurrent.atomic.AtomicInteger;
 /**
- * 模拟Queue
- * @author alienware
+ * 使用wait notfiy 模拟阻塞Queue
  *
  */
 public class MyQueue {

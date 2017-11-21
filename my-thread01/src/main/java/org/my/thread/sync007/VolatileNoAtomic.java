@@ -7,6 +7,8 @@ import java.util.concurrent.atomic.AtomicInteger;
  * 本实例知识点：说明volatile关键字修饰的变量如果多线程访问操作不能保证原子性，
  * 如果要保证原子性要使用 AtomicInteger 原子类型的相关操作
  *
+ * 模拟多个线程对变量++ 如果是int 类型使用volatile 修饰不能保证原子性操作， 不采用同步是不安全的添加
+ * atomic包下的都是原子性操作类。
  */
 public class VolatileNoAtomic extends Thread {
 
