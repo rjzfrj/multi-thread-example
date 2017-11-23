@@ -1,11 +1,15 @@
 package com.bjsxt.base.conn011;
 
+/**
+ *知识点：单例模式 双重确认单利模式  （dubble check 模式）
+ *
+ */
 public class DubbleSingleton {
 
 	private static DubbleSingleton ds;
 	
 	public static DubbleSingleton getDs(){
-		if(ds == null){
+		if(ds == null){   //这里判断对象是否为空
 			try {
 				//模拟初始化对象的准备时间...
 				Thread.sleep(3000);
@@ -13,7 +17,7 @@ public class DubbleSingleton {
 				e.printStackTrace();
 			}
 			synchronized (DubbleSingleton.class) {
-				if(ds == null){
+				if(ds == null){  //同步代码块中再次判断
 					ds = new DubbleSingleton();
 				}
 			}
