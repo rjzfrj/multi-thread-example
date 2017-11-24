@@ -20,7 +20,7 @@ public class WangMin implements Delayed{
 	@Override
 	public int compareTo(Delayed o) {
 		WangMin wm=(WangMin)o;
-		return this.getDelay(this.timeUnit)-wm.getDelay(this.timeUnit)>0?1:0;
+	    return this.endTime - wm.endTime > 0 ? 1 : (this.endTime - wm.endTime < 0 ? -1 : 0);
 	}
 
 	//是否到了截止时间
