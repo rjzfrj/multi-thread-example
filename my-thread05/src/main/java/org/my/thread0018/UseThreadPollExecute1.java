@@ -18,7 +18,7 @@ public class UseThreadPollExecute1  {
 	
 
 	/**
-	 * 使用有界队列的时，若有新的任务需要执行，如果线程池实际线程小鱼corePoolSize，则会有限创建线程
+	 * 使用有界队列的时，若有新的任务需要执行，如果线程池实际线程小鱼corePoolSize，则会优先创建线程
 	 * 若大于corePooSize，则会讲任务加入队列，
 	 * 若队列已满，则在总线程数不大于maxPoolSize的前题下，创建新的线程
 	 * 若线程数大于maxNumPoolSize，则执行拒绝策略，或其他自定义方式。
