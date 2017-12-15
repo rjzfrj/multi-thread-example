@@ -1,0 +1,6 @@
+Executor 框架 下创建线程方法
+  1 newFiedThreadPool()方法 返回固定数量线程，如果没有空闲线程，则被暂缓队列中等待空闲线程。
+  2 newSingleThreadExecutor() 创建一个线程的线程池，若线程空闲则只需，若没有空闲着展缓在队列中。
+  3 newCachedThreadPool()方法返回一个可根据时间情况调整线程个数的线程池，不现在最大线程数量，弱空闲线程无任务会在60秒自动回收
+  4 newScheduledThreadPool()方法，该方法返回一个SchededExecutorService对象，担该线程池可以指定线程数量。
+  
