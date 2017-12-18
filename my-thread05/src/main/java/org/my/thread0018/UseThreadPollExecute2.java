@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- *自定义线程池使用：自定义线程池使用无界队列的实例
+ *自定义线程池使用：自定义线程池使用无界队列的实例  （使用无界队列不存在任务拒绝，除非系统资源耗尽）
  *
  *
  */
