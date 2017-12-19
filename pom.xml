@@ -23,5 +23,6 @@
     <module>my-thread03</module>
     <module>my-thread04</module>
     <module>my-thread05</module>
+    <module>my-thread06</module>
   </modules>
 </project>
