@@ -7,11 +7,10 @@ package org.my.thread.sync005;
  */
 public class SyncDubbo2 {
 
-	static class Parent {
+	public static class Parent {
+		
 		public int i = 10;
-
 		public synchronized void methodParent() {
-
 			try {
 				i--;
 				System.out.println(" Parent i=" + i);
@@ -22,10 +21,8 @@ public class SyncDubbo2 {
 		}
 	}
 
-	static class Son extends Parent {
-
+	public static class Son extends Parent {
 		public synchronized void methodSon() {
-
 			try {
 				while(i>0) {
 				i--;
@@ -43,7 +40,6 @@ public class SyncDubbo2 {
 
 	public static void main(String[] args) {
 		final SyncDubbo2 syncDubbo1 = new SyncDubbo2();
-
 		Thread t1 = new Thread(new Runnable() {
 			@Override
 			public void run() {

@@ -6,6 +6,23 @@ package org.my.thread.sync005;
  */
 public class SyncDubbo1{
 	
+	
+	class Test implements Runnable{
+
+		@Override
+		public void run() {
+			System.out.println("test");
+		}
+		
+	}
+	static class  Test2 implements Runnable{
+		
+		@Override
+		public void run() {
+			System.out.println("test");
+		}
+		
+	}
 	public synchronized void method1() {
 		System.out.println("method1:"+Thread.currentThread().getName());
 //		try {
@@ -34,6 +51,10 @@ public class SyncDubbo1{
 				syncDubbo1.method1();
 			}
 		});
+		 
+		 Test t3=new SyncDubbo1().new Test();
+		 Test2 t4=new SyncDubbo1.Test2();
+		 Thread t2=new Thread(t4);
 		 t1.start();
 	}
 
